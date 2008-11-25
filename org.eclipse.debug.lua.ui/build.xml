@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="org.eclipse.debug.examples.ui" default="build.jars" basedir=".">
+
+	<property name="basews" value="${ws}"/>
+	<property name="baseos" value="${os}"/>
+	<property name="basearch" value="${arch}"/>
+	<property name="basenl" value="${nl}"/>
+	<property name="bundleId" value="org.eclipse.debug.examples.ui"/>
+	<property name="bundleVersion" value="1.0.0"/>
+
+	<!-- Compiler settings. -->
+	<property name="javacFailOnError" value="false"/>
+	<property name="javacDebugInfo" value="on"/>
+	<property name="javacVerbose" value="false"/>
+	<property name="logExtension" value=".log"/>
+	<property name="compilerArg" value=""/>
+	<property name="javacSource" value="1.5"/>
+	<property name="javacTarget" value="1.5"/>
+	<condition property="dir_bootclasspath" value="${java.home}/../Classes">
+		<os family="mac"/>
+	</condition>
+	<property name="dir_bootclasspath" value="${java.home}/lib"/>
+	<path id="path_bootclasspath">
+		<fileset dir="${dir_bootclasspath}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	<property name="bootclasspath" refid="path_bootclasspath"/>
+<condition property="bundleBootClasspath" value="${J2SE-1.4}"	>
+		<isset property="J2SE-1.4"/>
+	</condition>
+<condition property="bundleJavacSource" value="1.3"	>
+		<isset property="J2SE-1.4"/>
+	</condition>
+<condition property="bundleJavacTarget" value="1.2"	>
+		<isset property="J2SE-1.4"/>
+	</condition>
+	<property name="bundleJavacSource" value="${javacSource}"/>
+	<property name="bundleJavacTarget" value="${javacTarget}"/>
+	<property name="bundleBootClasspath" value="${bootclasspath}"/>
+
+	<target name="init" depends="properties">
+<condition property="pluginTemp" value="${buildTempFolder}/plugins"		>
+			<isset property="buildTempFolder"/>
+		</condition>
+		<property name="pluginTemp" value="${basedir}"/>
+<condition property="build.result.folder" value="${pluginTemp}/org.eclipse.debug.examples.ui_1.0.0"		>
+			<isset property="buildTempFolder"/>
+		</condition>
+		<property name="build.result.folder" value="${basedir}"/>
+		<property name="temp.folder" value="${basedir}/temp.folder"/>
+		<property name="plugin.destination" value="${basedir}"/>
+	</target>
+
+	<target name="properties" if="eclipse.running">
+		<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+
+	</target>
+
+	<target name="build.update.jar" depends="init" description="Build the plug-in: org.eclipse.debug.examples.ui for an update site.">
+		<delete dir="${temp.folder}"/>
+		<mkdir dir="${temp.folder}"/>
+		<antcall target="build.jars"/>
+		<antcall target="gather.bin.parts">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<jar destfile="${plugin.destination}/org.eclipse.debug.examples.ui_1.0.0.jar" basedir="${temp.folder}/org.eclipse.debug.examples.ui_1.0.0" filesetmanifest="merge"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+	<target name="@dot" depends="init" unless="@dot" description="Create jar: org.eclipse.debug.examples.ui @dot.">
+		<delete dir="${temp.folder}/@dot.bin"/>
+		<mkdir dir="${temp.folder}/@dot.bin"/>
+		<path id="@dot.classpath">
+			<pathelement path="../../plugins/org.eclipse.core.runtime_3.4.0.v20080512.jar"/>
+			<pathelement path="../../plugins/org.eclipse.osgi_3.4.0.v20080605-1900.jar"/>
+			<pathelement path="../../plugins/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.jobs_3.4.0.v20080512.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.runtime.compatibility.registry_3.2.200.v20080610/runtime_registry_compatibility.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.runtime.compatibility.registry_3.2.200.v20080610"/>
+			<pathelement path="../../plugins/org.eclipse.equinox.registry_3.4.0.v20080516-0950.jar"/>
+			<pathelement path="../../plugins/org.eclipse.equinox.preferences_3.2.200.v20080421-2006.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.runtime.compatibility.registry_3.2.200.v20080610/@dot"/>
+			<pathelement path="../../plugins/org.eclipse.core.contenttype_3.3.0.v20080604-1400.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.runtime.compatibility.auth_3.2.100.v20070502.jar"/>
+			<pathelement path="../../plugins/org.eclipse.equinox.app_1.1.0.v20080421-2006.jar"/>
+			<pathelement path="../../plugins/org.eclipse.osgi.services_3.1.200.v20071203.jar"/>
+			<pathelement path="../../plugins/javax.servlet_2.4.0.v200806031604.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.resources_3.4.0.v20080604-1400.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.resources.compatibility_3.4.0.v20080604-1400.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.resources.win32.x86_3.4.0.v20071204.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ant.core_3.2.0.v20080529.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.variables_3.2.100.v20080529-1300.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.expressions_3.4.0.v20080603-2000.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.filesystem_1.2.0.v20080604-1400.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.filesystem.win32.x86_1.1.0.v20080604-1400.jar"/>
+			<pathelement path="../../plugins/org.eclipse.debug.core_3.4.0.v20080612.jar"/>
+			<pathelement path="../../plugins/com.ibm.icu_3.8.1.v20080530.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui_3.4.0.I20080610-1200.jar"/>
+			<pathelement path="../../plugins/org.eclipse.swt_3.4.0.v3448f.jar"/>
+			<pathelement path="../../plugins/org.eclipse.swt.win32.win32.x86_3.4.0.v3448f.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jface_3.4.0.I20080606-1300.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.commands_3.4.0.I20080509-2000.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.workbench_3.4.0.I20080606-1300.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.workbench.compatibility_3.2.0.I20080509-2000/compatibility.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.workbench.compatibility_3.2.0.I20080509-2000/@dot"/>
+			<pathelement path="../../plugins/org.eclipse.help_3.3.100.v20080610.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jface.databinding_1.2.0.I20080515-2000a.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.databinding_1.1.0.I20080527-2000.jar"/>
+			<pathelement path="../../plugins/org.eclipse.debug.ui_3.4.0.v20080529-1300.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.console_3.3.0.v20080529-1300.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jface.text_3.4.0.v20080603-2000.jar"/>
+			<pathelement path="../../plugins/org.eclipse.text_3.4.0.v20080605-1800.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.workbench.texteditor_3.4.0.v20080603-2000.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.ide_3.4.0.I20080606-1300.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.win32_3.2.100.v20080408-0800.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.views_3.3.0.I20080509-2000.jar"/>
+			<pathelement path="../../plugins/org.eclipse.update.configurator_3.2.200.v20080417.jar"/>
+			<pathelement path="../../plugins/org.eclipse.update.core_3.2.200.v20080515.jar"/>
+			<pathelement path="../../plugins/org.eclipse.update.core.win32_3.2.100.v20080107.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.net_1.1.0.I20080604.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.net.win32.x86_1.0.0.I20080521.jar"/>
+			<pathelement path="../../plugins/org.eclipse.equinox.security_1.0.0.v20080512-1800.jar"/>
+			<pathelement path="../../plugins/org.eclipse.equinox.security.win32.x86_1.0.0.v20080529-1600.jar"/>
+			<pathelement path="../../plugins/org.eclipse.update.ui_3.2.100.v20080318.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.forms_3.3.100.v20080611.jar"/>
+			<pathelement path="../../plugins/org.eclipse.ui.editors_3.4.0.v20080603-2000.jar"/>
+			<pathelement path="../../plugins/org.eclipse.core.filebuffers_3.4.0.v20080603-2000.jar"/>
+			<pathelement path="../org.eclipse.debug.lua.core/bin/"/>
+			<pathelement path="../org.eclipse.debug.lua.core/@dot"/>
+			<pathelement path="../../plugins/org.eclipse.jdt.launching_3.4.0.v20080529-1300.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jdt.core_3.4.0.v_874.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jdt.compiler.apt_1.0.100.v20080513-1235.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jdt.compiler.tool_1.0.100.v_874.jar"/>
+			<pathelement path="../../plugins/org.eclipse.team.core_3.4.0.I20080605.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jdt.debug_3.4.0.v20080604/jdi.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jdt.debug_3.4.0.v20080604/jdimodel.jar"/>
+			<pathelement path="../../plugins/org.eclipse.jdt.debug_3.4.0.v20080604/tools.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-antlr.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-apache-bcel.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-apache-bsf.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-apache-log4j.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-apache-oro.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-apache-regexp.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-apache-resolver.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-commons-logging.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-commons-net.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-jai.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-javamail.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-jdepend.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-jmf.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-jsch.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-junit.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-launcher.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-netrexx.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-nodeps.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-starteam.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-stylebook.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-swing.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-trax.jar"/>
+			<pathelement path="../../plugins/org.apache.ant_1.7.0.v200803061910/lib/ant-weblogic.jar"/>
+		</path>
+		<!-- compile the source code -->
+		<javac destdir="${temp.folder}/@dot.bin" failonerror="${javacFailOnError}" verbose="${javacVerbose}" debug="${javacDebugInfo}" includeAntRuntime="no" bootclasspath="${bundleBootClasspath}" source="${bundleJavacSource}" target="${bundleJavacTarget}"		>
+			<compilerarg line="${compilerArg}" compiler="${build.compiler}"/>
+			<classpath refid="@dot.classpath" />
+			<src path="src/"			/>
+			<compilerarg value="@${basedir}/javaCompiler...args" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+			<compilerarg line="-log '${temp.folder}/@dot.bin${logExtension}'" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+		</javac>
+		<!-- Copy necessary resources -->
+		<copy todir="${temp.folder}/@dot.bin" failonerror="true" overwrite="false">
+			<fileset dir="src/">
+				<exclude name="**/*.java"/>
+				<exclude name="**/package.htm*"/>
+			</fileset>
+		</copy>
+		<mkdir dir="${build.result.folder}"/>
+		<copy todir="${build.result.folder}/@dot" failonerror="true" overwrite="false">
+			<fileset dir="${temp.folder}/@dot.bin">
+			</fileset>
+		</copy>
+		<delete dir="${temp.folder}/@dot.bin"/>
+	</target>
+
+	<target name="src.zip" depends="init" unless="src.zip">
+		<mkdir dir="${build.result.folder}"/>
+		<antcall target="zip.src.zip"/>
+	</target>
+	<target name="zip.src.zip">
+		<zip destfile="${build.result.folder}/src.zip" filesonly="false" whenempty="skip" update="false">
+			<fileset dir="src/">
+				<include name="**/*.java"/>
+			</fileset>
+		</zip>
+	</target>
+	<target name="copy.src.zip">
+		<copy todir="${source.destination.folder}/" failonerror="true" overwrite="true">
+			<fileset dir="src/">
+				<include name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build.jars" depends="init" description="Compile classes and build nested jars for the plug-in: org.eclipse.debug.examples.ui.">
+		<available property="@dot" file="${build.result.folder}/@dot"/>
+		<antcall target="@dot"/>
+	</target>
+
+	<target name="build.sources" depends="init">
+		<available property="src.zip" file="${build.result.folder}/src.zip"/>
+		<antcall target="src.zip"/>
+	</target>
+
+	<target name="gather.bin.parts" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/org.eclipse.debug.examples.ui_1.0.0"/>
+		<copy todir="${destination.temp.folder}/org.eclipse.debug.examples.ui_1.0.0" failonerror="true" overwrite="false">
+			<fileset dir="${build.result.folder}/@dot">
+				<include name="**"/>
+			</fileset>
+		</copy>
+		<copy todir="${destination.temp.folder}/org.eclipse.debug.examples.ui_1.0.0" failonerror="true" overwrite="false">
+			<fileset dir="${basedir}">
+				<include name="plugin.xml"/>
+				<include name="bin/"/>
+				<include name="about.html"/>
+				<include name="META-INF/"/>
+				<include name="icons/"/>
+				<include name="src/"/>
+				<include name="javaCompiler...args"/>
+				<include name="build.properties"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build.zips" depends="init">
+	</target>
+
+	<target name="gather.sources" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/org.eclipse.debug.examples.ui_1.0.0"/>
+		<copy file="${build.result.folder}/src.zip" todir="${destination.temp.folder}/org.eclipse.debug.examples.ui_1.0.0" failonerror="false" overwrite="false"/>
+		<antcall target="copy.src.includes">
+			<param name="source.destination.folder" value="${destination.temp.folder}/org.eclipse.debug.examples.ui_1.0.0"/>
+		</antcall>
+	</target>
+
+	<target name="gather.individual.sources" depends="init">
+		<antcall target="copy.src.zip">
+			<param name="source.destination.folder" value="${destination.temp.folder}"/>
+		</antcall>
+		<antcall target="copy.src.includes">
+			<param name="source.destination.folder" value="${destination.temp.folder}"/>
+		</antcall>
+	</target>
+
+	<target name="copy.src.includes" depends="init">
+		<copy todir="${source.destination.folder}" failonerror="false" overwrite="false">
+			<fileset dir="${basedir}">
+				<include name="src/"/>
+				<include name="about.html"/>
+				<include name="icons/"/>
+				<include name="plugin.xml"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="gather.logs" depends="init" if="destination.temp.folder">
+		<mkdir dir="${destination.temp.folder}/org.eclipse.debug.examples.ui_1.0.0"/>
+		<copy todir="${destination.temp.folder}/org.eclipse.debug.examples.ui_1.0.0" failonerror="false" overwrite="false">
+			<fileset dir="${temp.folder}">
+				<include name="@dot.bin${logExtension}"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean" depends="init" description="Clean the plug-in: org.eclipse.debug.examples.ui of all the zips, jars and logs created.">
+		<delete dir="${build.result.folder}/@dot"/>
+		<delete file="${build.result.folder}/src.zip"/>
+		<delete file="${plugin.destination}/org.eclipse.debug.examples.ui_1.0.0.jar"/>
+		<delete file="${plugin.destination}/org.eclipse.debug.examples.ui_1.0.0.zip"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+	<target name="refresh" depends="init" if="eclipse.running" description="Refresh this folder.">
+		<eclipse.convertPath fileSystemPath="D:/eclipse-3.4-open-lua-ide/eclipse/workspace/org.eclipse.debug.lua.ui" property="resourcePath"/>
+		<eclipse.refreshLocal resource="${resourcePath}" depth="infinite"/>
+	</target>
+
+	<target name="zip.plugin" depends="init" description="Create a zip containing all the elements for the plug-in: org.eclipse.debug.examples.ui.">
+		<delete dir="${temp.folder}"/>
+		<mkdir dir="${temp.folder}"/>
+		<antcall target="build.jars"/>
+		<antcall target="build.sources"/>
+		<antcall target="gather.bin.parts">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<antcall target="gather.sources">
+			<param name="destination.temp.folder" value="${temp.folder}/"/>
+		</antcall>
+		<delete>
+			<fileset dir="${temp.folder}">
+				<include name="**/*.bin${logExtension}"/>
+			</fileset>
+		</delete>
+		<zip destfile="${plugin.destination}/org.eclipse.debug.examples.ui_1.0.0.zip" basedir="${temp.folder}" filesonly="true" whenempty="skip" update="false"/>
+		<delete dir="${temp.folder}"/>
+	</target>
+
+</project>
