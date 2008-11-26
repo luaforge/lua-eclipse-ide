@@ -1,0 +1,491 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/hermes-ide/!svn/ver/15/trunk/plugins
+END
+org.eclipse.ui.ide_3.4.0.I20080606-1300.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui.ide_3.4.0.I20080606-1300.jar
+END
+jdi.jar
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/hermes-ide/!svn/ver/15/trunk/plugins/jdi.jar
+END
+org.eclipse.equinox.app_1.1.0.v20080421-2006.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.equinox.app_1.1.0.v20080421-2006.jar
+END
+org.eclipse.update.configurator_3.2.200.v20080417.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.update.configurator_3.2.200.v20080417.jar
+END
+ant-weblogic.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-weblogic.jar
+END
+org.eclipse.core.filesystem_1.2.0.v20080604-1400.jar
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.filesystem_1.2.0.v20080604-1400.jar
+END
+org.eclipse.osgi_3.4.0.v20080605-1900.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.osgi_3.4.0.v20080605-1900.jar
+END
+ant-commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-commons-logging.jar
+END
+ant-commons-net.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-commons-net.jar
+END
+ant-launcher.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-launcher.jar
+END
+ant.jar
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/hermes-ide/!svn/ver/15/trunk/plugins/ant.jar
+END
+org.eclipse.team.core_3.4.0.I20080605.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.team.core_3.4.0.I20080605.jar
+END
+org.eclipse.equinox.common_3.4.0.v20080421-2006.jar
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar
+END
+org.eclipse.ui.workbench.texteditor_3.4.0.v20080603-2000.jar
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui.workbench.texteditor_3.4.0.v20080603-2000.jar
+END
+ant-apache-regexp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-apache-regexp.jar
+END
+org.eclipse.update.core.win32_3.2.100.v20080107.jar
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.update.core.win32_3.2.100.v20080107.jar
+END
+ant-stylebook.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-stylebook.jar
+END
+org.eclipse.jface.text_3.4.0.v20080603-2000.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.jface.text_3.4.0.v20080603-2000.jar
+END
+org.eclipse.jface.databinding_1.2.0.I20080515-2000a.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.jface.databinding_1.2.0.I20080515-2000a.jar
+END
+ant-apache-oro.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-apache-oro.jar
+END
+org.eclipse.core.runtime.compatibility.auth_3.2.100.v20070502.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.runtime.compatibility.auth_3.2.100.v20070502.jar
+END
+org.eclipse.core.net.win32.x86_1.0.0.I20080521.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.net.win32.x86_1.0.0.I20080521.jar
+END
+ant-apache-resolver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-apache-resolver.jar
+END
+ant-starteam.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-starteam.jar
+END
+org.eclipse.swt_3.4.0.v3448f.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.swt_3.4.0.v3448f.jar
+END
+org.eclipse.core.contenttype_3.3.0.v20080604-1400.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.contenttype_3.3.0.v20080604-1400.jar
+END
+ant-jsch.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-jsch.jar
+END
+ant-nodeps.jar
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-nodeps.jar
+END
+org.eclipse.debug.ui_3.4.0.v20080529-1300.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.debug.ui_3.4.0.v20080529-1300.jar
+END
+org.eclipse.core.resources.compatibility_3.4.0.v20080604-1400.jar
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.resources.compatibility_3.4.0.v20080604-1400.jar
+END
+org.eclipse.core.net_1.1.0.I20080604.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.net_1.1.0.I20080604.jar
+END
+org.eclipse.core.databinding_1.1.0.I20080527-2000.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.databinding_1.1.0.I20080527-2000.jar
+END
+jdimodel.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/hermes-ide/!svn/ver/15/trunk/plugins/jdimodel.jar
+END
+org.eclipse.swt.win32.win32.x86_3.4.0.v3448f.jar
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.swt.win32.win32.x86_3.4.0.v3448f.jar
+END
+org.eclipse.text_3.4.0.v20080605-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.text_3.4.0.v20080605-1800.jar
+END
+org.eclipse.osgi.services_3.1.200.v20071203.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.osgi.services_3.1.200.v20071203.jar
+END
+org.eclipse.jface_3.4.0.I20080606-1300.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.jface_3.4.0.I20080606-1300.jar
+END
+runtime_registry_compatibility.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/hermes-ide/!svn/ver/15/trunk/plugins/runtime_registry_compatibility.jar
+END
+org.eclipse.core.jobs_3.4.0.v20080512.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.jobs_3.4.0.v20080512.jar
+END
+org.eclipse.core.resources.win32.x86_3.4.0.v20071204.jar
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.resources.win32.x86_3.4.0.v20071204.jar
+END
+org.eclipse.core.variables_3.2.100.v20080529-1300.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.variables_3.2.100.v20080529-1300.jar
+END
+ant-junit.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-junit.jar
+END
+ant-netrexx.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-netrexx.jar
+END
+ant-apache-log4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-apache-log4j.jar
+END
+org.eclipse.equinox.registry_3.4.0.v20080516-0950.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/hermes-ide/!svn/ver/16/trunk/plugins/org.eclipse.equinox.registry_3.4.0.v20080516-0950.jar
+END
+org.eclipse.core.commands_3.4.0.I20080509-2000.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.commands_3.4.0.I20080509-2000.jar
+END
+org.eclipse.update.ui_3.2.100.v20080318.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.update.ui_3.2.100.v20080318.jar
+END
+org.eclipse.jdt.compiler.apt_1.0.100.v20080513-1235.jar
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.jdt.compiler.apt_1.0.100.v20080513-1235.jar
+END
+org.eclipse.ui.forms_3.3.100.v20080611.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui.forms_3.3.100.v20080611.jar
+END
+org.eclipse.core.filebuffers_3.4.0.v20080603-2000.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.filebuffers_3.4.0.v20080603-2000.jar
+END
+org.eclipse.ui.editors_3.4.0.v20080603-2000.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui.editors_3.4.0.v20080603-2000.jar
+END
+org.eclipse.ui.win32_3.2.100.v20080408-0800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui.win32_3.2.100.v20080408-0800.jar
+END
+org.eclipse.ui.console_3.3.0.v20080529-1300.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui.console_3.3.0.v20080529-1300.jar
+END
+org.eclipse.equinox.security.win32.x86_1.0.0.v20080529-1600.jar
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.equinox.security.win32.x86_1.0.0.v20080529-1600.jar
+END
+org.eclipse.core.runtime_3.4.0.v20080512.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.runtime_3.4.0.v20080512.jar
+END
+org.eclipse.update.core_3.2.200.v20080515.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.update.core_3.2.200.v20080515.jar
+END
+org.eclipse.equinox.security_1.0.0.v20080512-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.equinox.security_1.0.0.v20080512-1800.jar
+END
+org.eclipse.ui_3.4.0.I20080610-1200.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui_3.4.0.I20080610-1200.jar
+END
+org.eclipse.ant.core_3.2.0.v20080529.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ant.core_3.2.0.v20080529.jar
+END
+org.eclipse.jdt.compiler.tool_1.0.100.v_874.jar
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.jdt.compiler.tool_1.0.100.v_874.jar
+END
+ant-apache-bcel.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-apache-bcel.jar
+END
+ant-javamail.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-javamail.jar
+END
+org.eclipse.core.resources_3.4.0.v20080604-1400.jar
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.resources_3.4.0.v20080604-1400.jar
+END
+ant-swing.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-swing.jar
+END
+org.eclipse.help_3.3.100.v20080610.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.help_3.3.100.v20080610.jar
+END
+org.eclipse.jdt.core_3.4.0.v_874.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.jdt.core_3.4.0.v_874.jar
+END
+ant-apache-bsf.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-apache-bsf.jar
+END
+compatibility.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/hermes-ide/!svn/ver/15/trunk/plugins/compatibility.jar
+END
+org.eclipse.core.expressions_3.4.0.v20080603-2000.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.expressions_3.4.0.v20080603-2000.jar
+END
+javax.servlet_2.4.0.v200806031604.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/hermes-ide/!svn/ver/15/trunk/plugins/javax.servlet_2.4.0.v200806031604.jar
+END
+com.ibm.icu_3.8.1.v20080530.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/hermes-ide/!svn/ver/15/trunk/plugins/com.ibm.icu_3.8.1.v20080530.jar
+END
+ant-jai.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-jai.jar
+END
+org.eclipse.ui.workbench_3.4.0.I20080606-1300.jar
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui.workbench_3.4.0.I20080606-1300.jar
+END
+ant-jdepend.jar
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-jdepend.jar
+END
+ant-jmf.jar
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-jmf.jar
+END
+ant-trax.jar
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-trax.jar
+END
+org.eclipse.debug.core_3.4.0.v20080612.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.debug.core_3.4.0.v20080612.jar
+END
+org.eclipse.core.filesystem.win32.x86_1.1.0.v20080604-1400.jar
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.core.filesystem.win32.x86_1.1.0.v20080604-1400.jar
+END
+ant-antlr.jar
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/hermes-ide/!svn/ver/15/trunk/plugins/ant-antlr.jar
+END
+org.eclipse.ui.views_3.3.0.I20080509-2000.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.ui.views_3.3.0.I20080509-2000.jar
+END
+org.eclipse.jdt.launching_3.4.0.v20080529-1300.jar
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/hermes-ide/!svn/ver/15/trunk/plugins/org.eclipse.jdt.launching_3.4.0.v20080529-1300.jar
+END
