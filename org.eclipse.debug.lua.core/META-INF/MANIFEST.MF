@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Example Debug Core Plug-in
+Bundle-SymbolicName: org.eclipse.debug.examples.core;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: org.eclipse.debug.examples.core.pda.DebugCorePlugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.core.variables,
+ org.eclipse.debug.core,
+ org.apache.ant;bundle-version="1.7.0";resolution:=optional
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.debug.examples.core.pda;uses:="org.eclipse.core.runtime,org.osgi.framework",
+ org.eclipse.debug.examples.core.pda.breakpoints;uses:="org.eclipse.core.resources,org.eclipse.debug.examples.core.pda.model,org.eclipse.debug.core.model",
+ org.eclipse.debug.examples.core.pda.launcher;uses:="org.eclipse.debug.core,org.eclipse.core.runtime,org.eclipse.jdt.launching",
+ org.eclipse.debug.examples.core.pda.model;uses:="org.eclipse.debug.core,org.eclipse.core.resources,org.eclipse.debug.core.model",
+ org.eclipse.debug.examples.core.pda.sourcelookup;uses:="org.eclipse.debug.core.sourcelookup,org.eclipse.debug.core,org.eclipse.core.runtime"
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.debug.ui,
+ org.eclipse.jdt.launching,
+ org.eclipse.ui.editors.text

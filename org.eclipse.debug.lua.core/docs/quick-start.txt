@@ -1,0 +1,188 @@
+Introduction
+============
+If you have used Eclipse then you already know 99% of how to debug with the 
+Lua IDE. Stepping, breakpoints, editor behavior, etc. are done in the 
+same manner. This is because the IDE is an Eclipse plugin. Many of the most 
+useful Eclipse features that you are already familiar with are also in the 
+Lua IDE. The look and feel is also similar.
+
+The Lua IDE debugger can:
+
+o step, continue, terminate 
+o set/clear breakpoints via clicking or menus 
+o run to line (a type of temporary breakpoint) 
+o display locals and globals, both in views as well as with cursor hover 
+o display the Lua data stack 
+o display stack frames, clicking on a stack frame goes to that source location 
+o edit Lua, syntax highlight, redo, automatic indentation 
+o communicate commands and events over sockets to/from ldb 
+o persist projects, configurations and files 
+o serialize Lua variables and values for ldb to IDE communication 
+
+Which Lua
+=========
+There are 2 parts to the Lua Eclipse IDE. A Java part and a C part. The C
+part of the IDE contains the Lua interpreter version 5.1.2 . Packaging the
+interpreter this way simplified the packaging and development of the IDE.
+
+In the future, this may be separated so that upgrading to new Lua versions
+may be easier. In the meantime, there will be periodic updates of the IDE
+with new versions of the Lua interpreter.
+
+Which IDE Target
+================
+Currently the IDE is only built for Windows.
+
+It would be very easy to compile the Java and C code for a Linux target, or
+for any target.
+
+This may be done in a later release (see 80/20 rule).
+
+Install plug-ins and open-ldb executable
+========================================
+There are 2 plug-ins and 1 executable in the binary distribution.
+
+1) org.eclipse.debug.examples.core_1.0.0.jar - core debug functionality
+2) org.eclipse.debug.examples.ui_1.0.0.jar - UI debug functionality and editor
+3) open-ldb.exe - debugger which controls Lua interpreter
+
+Install the plug-in jars "1" and "2" in the Eclipse plug-in directory of
+the Eclipse 3.4 you are using. This will allow you to develop in Java or C/C++
+as before but will now also recognize Lua files.
+
+For example, if you had:
+
+D:\eclipse-3.4\eclipse\eclipse.exe
+
+Then the plugin directory of this eclipse is:
+
+D:\eclipse-3.4\eclipse\plugins
+When this eclipse starts up, it reads all the plugin jars in the plugin 
+directory and loads the appropriate plugin jars as needed.
+
+The open-ldb.exe can be placed in any directory. It is referenced from the
+"Debug Configurations" view (see below).
+
+Note that the plug-in jars "1" and "2" above are a retarget of a debugger 
+developed by the Eclipse Foundation. This document describes the architecture
+of the debugger.
+http://www.eclipse.org/articles/Article-Debugger/how-to.html
+
+Even though this Lua IDE is a retarget, much of the underlying functionality
+of the IDE works in a similar manner to the original debugger. For example,
+there are command sockets between the core debugger (1) and the interpreter (2)
+in both the original architecture and the Lua IDE. Therefore, if you want a
+better understanding of the internals, start with the URL above. 
+
+Configuration
+=============
+1) Make a project
+File -> New -> Project
+will pop up a New Project wizard. Click next and in the "Project name" text 
+box enter you project name. For this example, it will be "newProj". The "Use 
+default location" check box should be checked. Click next again. Since this 
+example will not reference any projects, click Finish.
+
+2) Set up a debug launch configuration
+Run -> Debug Configurations...
+This same view is also accessible via the "bug icons" drop down menu.
+There are 2 fields to set here
+a) "Lua Program:" - The relative or full path to the Lua program to debug
+b) "ldb Full Path:" - The location of the open-ldb.exe
+
+Then debug the Lua application just as you would any application in Eclipse.
+
+open-ldb
+========
+Open-ldb is a command line debugger that was developed before the IDE. Later, 
+open-ldb was enhanced so that it could be used with the Lua IDE. The Lua
+interpreter is run in open-ldb. Then open-ldn controls the interpreter to
+do things like step or display variables. There are 2 sockets from the IDE
+to open-ldb to send/receive commands or events.
+
+You can run open-ldb as a command line debugger but it will not have the
+ease of use of the IDE. It will not be documented but if you really want to
+use open-ldb as a command line debugger then the command line would look
+something like:
+
+$ open-ldb.exe -n  D:/sort.lua -b true -t ldb -c  2370 -e  2371
+
+Once ldb starts, it will have stopped the interpreter to give you a chance
+to set breakpoints, etc. Type "help" to see the available commands. The
+commands resemble those of gdb but are greatly simplified.
+
+Lua Editor
+==========
+The Editor is an Eclipse plugin that allows a user to edit Lua scripts.
+
+Some capabilities are provided in the implementation of the Lua editor. Other 
+capabilities, like line numbers are provided by the Eclipse text editor base 
+classes.
+
+o Syntax highlighting 
+o A syntax checker (currently accomplished by running the Lua program) 
+o Script line error highlighting 
+o Unlimited undo capability 
+o User settable local history, e.g. 10,000 entries per file kept for 365 days 
+
+The debugger and the Editor are tightly integrated. For example, when the 
+user "steps", the line is highlighted in the Editor source and moves from 
+line to line.
+
+For a general discussion of the Eclipse Editor concepts:
+http://www.eclipse.org/eclipse/platform-text/eclipseCon/talk.pdf
+https://www6.software.ibm.com/developerworks/education/os-ecl-commplgin2/os-ecl-commplgin2-a4.pdf
+
+Source Code
+===========
+In order to understand any of the code in the Lua debugger, one must first 
+understand The Eclipse debug model. The Eclipse debug model is documented in 
+the Platform Plug-in Developer Guide under 
+Programmer's Guide > Program debug and launch support> Debugging a Program> 
+  Platform debug model.
+
+Then read:
+http://www.eclipse.org/articles/Article-Debugger/how-to.html
+
+General Architecture flow:
+
+   Sockets
+   commands
+   <---->
+IDE       open-ldb
+   events
+   <----
+
+
+80/20 Rule
+==========
+You will notice that not every feature is implemented. This has been done
+intentionally in order to build an IDE in a small amount of time. The Pareto
+Rule's application to building the IDE means that 80% of the functionality is 
+provided by 20% of the work.
+
+If there are enough requests for a "must have" feature then it may be included
+in a future release.
+
+For example, there is no "step into". However, this can be just as effectively
+accomplished by using the "Run to Line" feature (control r).
+
+The values of a table can be displayed by clicking on the "+" by the table
+name. However, there is no facility for displaying a table of tables. The
+second level table values will just show as not currently displayable. For
+most applications the display of the first level table values should be
+sufficient.
+
+Requirements
+============
+Eclipse 3.4 Ganymede - either "Eclipse IDE for Java EE Developers" or
+"Eclipse IDE for Java Developers" or "Eclipse IDE for C/C++ Developers"
+http://www.eclipse.org/downloads/
+
+Java 1.5 or 1.6 to run Eclipse
+
+Contact
+=======
+John Rodriguez
+javafactotum@yahoo.com
+jrodriguez@verisign.com
